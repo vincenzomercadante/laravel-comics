@@ -12,7 +12,7 @@
             <div class="col-2">
                 <div class="card-custom">
                     <div class="img-container">
-                        <img src="{{$comic['thumb']}}" alt="">
+                        <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
                     </div>
                     <h3 class="mt-3 text-uppercase">{{$comic['series']}}</h3>
                 </div>
@@ -26,6 +26,30 @@
             </div>
         </div>
     </div>
+    <section class="badges-area py-5 mt-4">
+        <div class="container d-flex align-items-center text-center">
+            <a href="#" class="d-flex align-items-center gap-3 justify-content-center">
+                <img src="{{Vite::asset('/resources/images/buy-comics-digital-comics.png')}}" alt="badge">
+                <span class="text-uppercase">digital comics</span>
+            </a>
+            <a href="#" class="d-flex align-items-center gap-3 justify-content-center">
+                <img src="{{Vite::asset('/resources/images/buy-comics-merchandise.png')}}" alt="badge">
+                <span class="text-uppercase">dc merchandise</span>
+            </a>
+            <a href="#" class="d-flex align-items-center gap-3 justify-content-center">
+                <img src="{{Vite::asset('/resources/images/buy-comics-subscriptions.png')}}" alt="badge">
+                <span class="text-uppercase">subscription</span>
+            </a>
+            <a href="#" class="d-flex align-items-center gap-3 justify-content-center">
+                <img src="{{Vite::asset('/resources/images/buy-comics-shop-locator.png')}}" alt="badge">
+                <span class="text-uppercase">comic shop locator</span>
+            </a>
+            <a href="#" class="d-flex align-items-center gap-3 justify-content-center">
+                <img src="{{Vite::asset('/resources/images/buy-dc-power-visa.svg')}}" alt="badge">
+                <span class="text-uppercase">dc power visa</span>
+            </a>
+        </div>
+    </section>
 </main>
 
 @endsection
