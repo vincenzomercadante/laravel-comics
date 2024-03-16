@@ -23,32 +23,47 @@ header {
         }
     }
     .navbar {
-        padding: 1rem 0;
+        padding: 0;
         color: #333;
+        height: 120px;
 
-        li {
-            display: inline-block;
-        }
-        .search-bar {
-            color: #333;
-            border-bottom: 2px solid $main-color;
-            width: 150px;
+        .container {
+            height: 100%;
+            ul {
+                height: 100%;
+                display: flex;
 
-            input {
-                outline: none;
-                border: none;
-                width: 100%;
+                li {
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+
+                    &.active {
+                        box-shadow: inset 0px -5px 0px 0px $main-color;
+                    }
+                }
             }
-            ::placeholder {
-                text-align: right;
-                text-transform: capitalize;
+            .search-bar {
                 color: #333;
-                opacity: 1;
-                font-weight: bold;
+                border-bottom: 2px solid $main-color;
+                width: 150px;
+
+                input {
+                    outline: none;
+                    border: none;
+                    width: 100%;
+                }
+                ::placeholder {
+                    text-align: right;
+                    text-transform: capitalize;
+                    color: #333;
+                    opacity: 1;
+                    font-weight: bold;
+                }
             }
-        }
-        .fa-caret-down {
-            color: $main-color;
+            .fa-caret-down {
+                color: $main-color;
+            }
         }
     }
 
@@ -136,11 +151,6 @@ footer {
             img {
                 position: absolute;
                 right: 0;
-                bottom: 50%;
-                transform: translateY(50%);
-
-                max-width: 50%;
-                max-height: none;
             }
         }
     }
@@ -158,6 +168,7 @@ footer {
             padding: 0.8rem;
             border: 2px solid $main-color;
             color: white;
+            cursor: pointer;
         }
     }
 }

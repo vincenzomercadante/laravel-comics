@@ -24,12 +24,13 @@
             {{-- site navbar --}}
             <ul class="flex-grow-1 ms-5">
                 {{-- link generator --}}
-                @forelse ($menus as $menu)
-                    <li>
-                        <a href="#" @class([
+                @forelse ($menus as $index => $menu)
+                    <li @class(['active' => Route::currentRouteName()==$menu])>
+                        <a href="{{route($menu)}}" @class([
                              'text-uppercase',
                              'mx-3',
-                             'fw-semibold'
+                             'fw-semibold',
+                             
 
                         ])>
                         
