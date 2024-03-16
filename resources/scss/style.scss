@@ -5,9 +5,6 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    li {
-        display: inline-block;
-    }
 }
 a {
     color: inherit;
@@ -29,6 +26,9 @@ header {
         padding: 1rem 0;
         color: #333;
 
+        li {
+            display: inline-block;
+        }
         .search-bar {
             color: #333;
             border-bottom: 2px solid $main-color;
@@ -61,7 +61,7 @@ header {
 
 .home {
     background-color: $comics-main-bg;
-    padding: 80px 0;
+    padding-top: 80px;
 
     h1 {
         position: absolute;
@@ -91,6 +91,7 @@ header {
         padding: 0.5rem 1rem;
         background-color: $main-color;
         color: white;
+        cursor: pointer;
     }
 
     .badges-area {
@@ -102,6 +103,61 @@ header {
 
         img {
             max-width: 50px;
+        }
+    }
+}
+
+footer {
+    .links-section {
+        background-image: (url("/resources/images/footer-bg.jpg"));
+        background-size: cover;
+        max-height: 500px;
+        overflow: hidden;
+
+        .container {
+            position: relative;
+
+            h3 {
+                color: white;
+                font-size: 1.2rem;
+            }
+
+            a {
+                color: #666;
+            }
+
+            p {
+                color: #666;
+
+                span {
+                    color: $main-color;
+                }
+            }
+            img {
+                position: absolute;
+                right: 0;
+                bottom: 50%;
+                transform: translateY(50%);
+
+                max-width: 50%;
+                max-height: none;
+            }
+        }
+    }
+
+    .footer-icon {
+        $bg-color: #303030;
+        background-color: $bg-color;
+
+        h4 {
+            margin: 0;
+            color: $main-color;
+        }
+
+        .btn-custom {
+            padding: 0.8rem;
+            border: 2px solid $main-color;
+            color: white;
         }
     }
 }
