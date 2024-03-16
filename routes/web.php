@@ -68,3 +68,10 @@ Route::get('/shop', function () {
     $menus = config('db.menus');
     return view('shop', compact('menus'));
 }) ->name('shop');
+
+Route::get('/comic_details/{index}', function ($index) {
+    $menus = config('db.menus');
+    $comics = config('db.comics');
+    $comic = $comics[$index];
+    return view('comic_details', compact('menus', 'comic'));
+}) ->name('comic_details');

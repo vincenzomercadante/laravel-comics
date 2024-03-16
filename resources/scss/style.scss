@@ -90,11 +90,39 @@ header {
 
     .img-container {
         height: 200px;
-        overflow: hidden;
+        position: relative;
+        cursor: pointer;
+
+        &:hover .overlay {
+            opacity: 1;
+        }
+
         img {
             object-fit: cover;
             object-position: center;
             width: 100%;
+            height: 200px;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba($color: #333, $alpha: 0.5);
+            opacity: 0;
+            z-index: 1;
+            backdrop-filter: blur(10px);
+            transition: all 0.2s linear;
+
+            h2 {
+                color: white;
+                font-size: 1.3rem;
+                line-height: 200px;
+                text-align: center;
+            }
         }
     }
 
