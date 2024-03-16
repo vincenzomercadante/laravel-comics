@@ -14,17 +14,22 @@
         
         {{-- card grid --}}
         <div class="row gy-5">
+            {{-- comic grid generator --}}
             @foreach ($comics as $index => $comic)
             <div class="col-2">
                 <div class="card-custom">
                     <div class="img-container">
+                        {{-- route for the comic details where i give the single comic as parameter --}}
                         <a href="{{route('comic_details', $index)}}">
+                            {{-- comic image --}}
                             <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}">
+                            {{-- overlay --}}
                             <div class="overlay">
                                 <h2 class="text-uppercase">click for more!</h2>
                             </div>
                         </a>
                     </div>
+                    {{-- comic series name --}}
                     <h3 class="mt-3 text-uppercase">{{$comic['series']}}</h3>
                 </div>
             </div>

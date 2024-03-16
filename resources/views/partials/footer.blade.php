@@ -12,25 +12,25 @@
                                 <h3 class="text-uppercase">dc comics</h3>
                                 <ul class="mt-2">
                                     <li>
-                                        <a href="#" class="text-capitalize">characters</a>                                      
+                                        <a href="{{route('characters')}}" class="text-capitalize">characters</a>                                      
                                     </li>
                                     <li>
-                                        <a href="#" class="text-capitalize">comics</a>
+                                        <a href="{{route('comics')}}" class="text-capitalize">comics</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-capitalize">movies</a>
+                                        <a href="{{route('movies')}}" class="text-capitalize">movies</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-capitalize">TV</a>
+                                        <a href="{{route('tv')}}" class="text-capitalize">TV</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-capitalize">games</a>
+                                        <a href="{{route('games')}}" class="text-capitalize">games</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-capitalize">videos</a>
+                                        <a href="{{route('videos')}}" class="text-capitalize">videos</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-capitalize">news</a>
+                                        <a href="{{route('news')}}" class="text-capitalize">news</a>
                                     </li>
                                 </ul>
                             </section>
@@ -40,10 +40,10 @@
                                 <h3 class="text-uppercase">shop</h3>
                                 <ul>
                                     <li>
-                                        <a href="#" class="text-capitalize">shop DC</a>
+                                        <a href="{{route('shop')}}" class="text-capitalize">shop DC</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="text-capitalize">shop DC collectibles</a>
+                                        <a href="{{route('shop')}}" class="text-capitalize">shop DC collectibles</a>
                                     </li>
                                 </ul>
                             </section>
