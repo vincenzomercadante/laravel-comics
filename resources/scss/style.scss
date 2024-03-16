@@ -150,6 +150,150 @@ header {
     }
 }
 
+.comic-detail {
+    .container-custom {
+        position: relative;
+        width: 1114px;
+    }
+    .thumb-container {
+        background-color: $main-color;
+        height: 100px;
+
+        .thumb {
+            position: absolute;
+            bottom: 25px;
+            border: 1px solid white;
+
+            img {
+                height: 300px;
+                width: 200px;
+                object-fit: cover;
+            }
+
+            .category,
+            .gallery-tab {
+                $badge-color: #00a9d9;
+                position: absolute;
+                padding: 0.2rem;
+                background-color: $badge-color;
+                color: white;
+                font-size: 0.8rem;
+            }
+
+            .category {
+                left: 0;
+                top: 0;
+            }
+
+            .gallery-tab {
+                bottom: 0;
+                right: 0;
+                left: 0;
+                text-align: center;
+            }
+        }
+    }
+
+    .main-details {
+        padding: 50px 0;
+
+        h1 {
+            $title-color: #003f5e;
+
+            color: $title-color;
+            font-size: 1.8rem;
+        }
+
+        .info {
+            width: 70%;
+
+            .col-8,
+            .col-4 {
+                background-color: #55ba59;
+                border-bottom: 1px solid #333;
+            }
+            .col-8 {
+                border-right: 1px solid #333;
+                h5 {
+                    color: #bafd96;
+
+                    span {
+                        color: white;
+                    }
+                }
+            }
+
+            .col-4 {
+                cursor: pointer;
+                h5,
+                i {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .other-info-wrapper {
+        $bg-color: #f6f6f6;
+        background-color: $bg-color;
+        .other-info {
+            padding: 1rem 0;
+
+            h3,
+            h5 {
+                margin: 0;
+                color: #003f5e;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+
+            .info,
+            .info-bottom {
+                border-bottom: 1px solid #e3e3e3;
+
+                h5 {
+                    font-size: 0.9rem;
+                    flex-grow: 1;
+                }
+
+                p {
+                    color: #00a9d9;
+                    font-size: 0.8rem;
+                    width: 70%;
+                }
+            }
+
+            .info {
+                border-top: 1px solid #e3e3e3;
+            }
+
+            .specs .info p {
+                color: #00a9d9;
+            }
+
+            .specs .info-bottom p {
+                color: #003f5e;
+            }
+        }
+
+        .badge {
+            margin-top: 100px;
+            border-top: 1px solid #e3e3e3;
+            background-color: rgba($color: #444, $alpha: 0.5);
+            .container-custom {
+                .badge-link {
+                    color: #d8d8d8;
+                    img {
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 footer {
     .links-section {
         background-image: (url("/resources/images/footer-bg.jpg"));
