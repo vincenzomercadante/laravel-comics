@@ -23,24 +23,40 @@
 
             {{-- site navbar --}}
             <ul class="flex-grow-1 ms-5">
-                {{-- link generator --}}
-                @forelse ($menus as $index => $menu)
-                    <li @class(['active' => Route::currentRouteName()==$menu])>
-                        <a href="{{route($menu)}}" @class([
-                             'text-uppercase',
-                             'mx-3',
-                             'fw-semibold',
-                             
 
-                        ])>
-                        
-                        {{$menu}}
-                        @if($loop->last) <i class="fa-solid fa-caret-down"></i> @endif
+                <li @class(['active' => Route::currentRouteName()=='characters'])>
+                    <a href="{{route('characters')}}" class="text-uppercase mx-3 fw-semibold">characters</a>
+                </li>
+                <li @class(['active' => Route::currentRouteName()=='comics' || Route::currentRouteName()=='comic_details'])>
+                    <a href="{{route('comics')}}" class="text-uppercase mx-3 fw-semibold">comics</a>
+                </li>
+                <li @class(['active' => Route::currentRouteName()=='movies'])>
+                    <a href="{{route('movies')}}" class="text-uppercase mx-3 fw-semibold">movies</a>
+                </li>
+                <li @class(['active' => Route::currentRouteName()=='tv'])>
+                    <a href="{{route('tv')}}" class="text-uppercase mx-3 fw-semibold">tv</a>
+                </li>
+                <li @class(['active' => Route::currentRouteName()=='games'])>
+                    <a href="{{route('games')}}" class="text-uppercase mx-3 fw-semibold">games</a>
+                </li>
+                <li @class(['active' => Route::currentRouteName()=='collectibles'])>
+                    <a href="{{route('collectibles')}}" class="text-uppercase mx-3 fw-semibold">collectibles</a>
+                </li>
+                <li @class(['active' => Route::currentRouteName()=='videos'])>
+                    <a href="{{route('videos')}}" class="text-uppercase mx-3 fw-semibold">videos</a>
+                </li>
+                <li @class(['active' => Route::currentRouteName()=='fans'])>
+                    <a href="{{route('fans')}}" class="text-uppercase mx-3 fw-semibold">fans</a>
+                </li>
+                <li @class(['active' => Route::currentRouteName()=='news'])>
+                    <a href="{{route('news')}}" class="text-uppercase mx-3 fw-semibold">news</a>
+                </li>
+                <li @class(['active' => Route::currentRouteName()=='shop'])>
+                    <a href="{{route('shop')}}" class="text-uppercase mx-3 fw-semibold">
+                        shop
+                        <i class="fa-solid fa-caret-down"></i>
                     </a>
-                    </li>
-                @empty
-                    <li>Nessun valore presente</li>
-                @endforelse
+                </li>
             </ul>
 
             {{-- search bar --}}

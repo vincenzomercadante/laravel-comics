@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,65 +15,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    $menus = config('db.menus');
-    $comics = config('db.comics');
-    return view('home', compact('menus', 'comics'));
-}) ->name('comics');
+Route::get('/', [PageController::class, 'comics']) ->name('comics');
 
-Route::get('/characters', function () {
-    $menus = config('db.menus');
-    
-    
-    return view('characters', compact('menus' ));
-}) ->name('characters');
+Route::get('/characters', [PageController::class, 'characters']) ->name('characters');
 
-Route::get('/movies', function () {
-    $menus = config('db.menus');
-    return view('movies', compact('menus'));
-}) ->name('movies');
+Route::get('/movies', [PageController::class, 'movies']) ->name('movies');
 
 
-Route::get('/tv', function () {
-    $menus = config('db.menus');
-    return view('tv', compact('menus'));
-}) ->name('tv');
+Route::get('/tv', [PageController::class, 'tv']) ->name('tv');
 
 
-Route::get('/games', function () {
-    $menus = config('db.menus');
-    return view('games', compact('menus'));
-}) ->name('games');
+Route::get('/games', [PageController::class, 'games']) ->name('games');
 
 
-Route::get('/collectibles', function () {
-    $menus = config('db.menus');
-    return view('collectibles', compact('menus'));
-}) ->name('collectibles');
+Route::get('/collectibles', [PageController::class, 'collectibles']) ->name('collectibles');
 
-Route::get('/videos', function () {
-    $menus = config('db.menus');
-    return view('videos', compact('menus'));
-}) ->name('videos');
+Route::get('/videos', [PageController::class, 'videos']) ->name('videos');
 
-Route::get('/fans', function () {
-    $menus = config('db.menus');
-    return view('fans', compact('menus'));
-}) ->name('fans');
+Route::get('/fans', [PageController::class, 'fans']) ->name('fans');
 
-Route::get('/news', function () {
-    $menus = config('db.menus');
-    return view('news', compact('menus'));
-}) ->name('news');
+Route::get('/news', [PageController::class, 'news']) ->name('news');
 
-Route::get('/shop', function () {
-    $menus = config('db.menus');
-    return view('shop', compact('menus'));
-}) ->name('shop');
+Route::get('/shop', [PageController::class, 'shop']) ->name('shop');
 
-Route::get('/comic_details/{index}', function ($index) {
-    $menus = config('db.menus');
-    $comics = config('db.comics');
-    $comic = $comics[$index];
-    return view('comic_details', compact('menus', 'comic'));
-}) ->name('comic_details');
+Route::get('/comic_details/{index}', [PageController::class, 'comic_details']) ->name('comic_details');
